@@ -9,7 +9,7 @@ import (
 )
 
 func ReadFile(fileName string) ([]byte, error) {
-	if strings.HasPrefix(fileName, ".json") {
+	if strings.HasSuffix(fileName, ".json") {
 		return nil, fmt.Errorf(consts.ERR_JSON_FILE)
 	}
 	
